@@ -23,7 +23,7 @@ const NewProduct = () => {
 
     <AdminSIdebar/>
 
-    <main className="product-managment">
+    <main className="productManagment">
        <article>
         <form>
            <h2>New Product</h2>
