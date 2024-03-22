@@ -1,0 +1,43 @@
+{
+    "categories" : [
+        {
+            "value" : 90 , 
+            "heading" : "Laptops"
+        },
+        {
+            "value" : 80 , 
+            "heading" : "Shoes"
+        },
+        {
+            "value" : 60 , 
+            "heading" : "Jeans"
+        },
+        {
+            "value" : 20 , 
+            "heading" : "Jackets"
+        }
+    ],
+    "transactions":[
+        {
+            "id" : "kskksks",
+            "amount" : 40000 , 
+            "quantity" : 4 , 
+            "discount" : 300 , 
+            "status" : "Processing"
+        },
+        {
+            "id" : "kzzzzzzzzzsks",
+            "amount" : 20000 , 
+            "quantity" : 4 , 
+            "discount" : 300 , 
+            "status" : "Processing"
+        },
+        {
+            "id" : "kscccccks",
+            "amount" : 2000 , 
+            "quantity" : 4 , 
+            "discount" : 300 , 
+            "status" : "Processing"
+        }
+    ]
+}
