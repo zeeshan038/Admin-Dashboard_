@@ -111,7 +111,7 @@ export const BarChart = ({
 interface DoughnutChartProps {
     labels : string[];
     data : number[];
-    backgroundColor : string ; 
+    backgroundColor : string[]; 
     cutout? : number | string;
     legends ? : boolean ;
     offset ? : number[] ;
@@ -156,7 +156,7 @@ export const DoughnutChart = ({
 interface PieChartProps {
   labels : string[];
   data : number[];
-  backgroundColor : string ; 
+  backgroundColor : string[]; 
   offset ? : number[] ;
 }
 
