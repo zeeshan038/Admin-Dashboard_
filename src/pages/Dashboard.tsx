@@ -2,7 +2,7 @@ import { FaRegBell } from "react-icons/fa"
 import AdminSIdebar from "../components/AdminSIdebar"
 import { BsSearch } from 'react-icons/bs'
 import user from '../assets/user.jpeg'
-import { HiTrendingUp, HiTrendingDown , HiMenuAlt4 } from 'react-icons/hi'
+import { HiTrendingUp, HiTrendingDown} from 'react-icons/hi'
 import data from '../assets/data.json'
 import { BarChart, DoughnutChart } from "../components/Chart"
 import {BiMaleFemale} from 'react-icons/bi'

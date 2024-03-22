@@ -6,29 +6,29 @@ import { Toaster } from "react-hot-toast";
 const Coupon = () => {
     const [size, setSize] = useState<number>(8);
     const [prefix, setPrefix] = useState<string>("");
-    const [includeNumber, setIncludeNumber] = useState<number>(0);
-    const [includeCharacter, setIncludeCharacter] = useState<number>(0);
-    const [includeSymbols, setIncludeSymbols] = useState<number>(0);
+    const [includeNumber, setIncludeNumber] = useState<boolean>(false); 
+    const [includeCharacter, setIncludeCharacter] = useState<boolean>(false); 
+    const [includeSymbols, setIncludeSymbols] = useState<boolean>(false); 
     const [isCopied, setIsCopied] = useState<boolean>(false);
     const [coupon, setCoupon] = useState<string>("");
 
-    const allletters = "ABCDEFGHIJKLMNNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    const allNumbers = "1234567890 ";
+    const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const allNumbers = "1234567890";
     const allSymbols = "@#$%^&*()_+";
 
-    const copyText = async(coupon: string) => {
-        await window.navigator.clipboard.writeText(coupon).then(()=>  toast.success("coppied to clipboard")).catch(()=>toast.error("Error while copying"));
-          setIsCopied(true);
-  
+    const copyText = async (coupon: string) => {
+        await window.navigator.clipboard.writeText(coupon).then(() => toast.success("Copied to clipboard")).catch(() => toast.error("Error while copying"));
+        setIsCopied(true);
     }
-    useEffect(()=>{
-      setIsCopied(false);
-    },[coupon]);
+
+    useEffect(() => {
+        setIsCopied(false);
+    }, [coupon]);
 
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!includeNumber && !includeCharacter && !includeSymbols) {
-            return toast.error("Please select one at least, Number, Char or Symbol");
+            return toast.error("Please select one at least: Number, Char, or Symbol");
         }
 
         let result: string = prefix;
@@ -36,7 +36,7 @@ const Coupon = () => {
 
         for (let i = 0; i < loopLength; i++) {
             let entriesString: string = "";
-            if (includeCharacter) entriesString += allletters;
+            if (includeCharacter) entriesString += allLetters;
             if (includeNumber) entriesString += allNumbers;
             if (includeSymbols) entriesString += allSymbols;
 

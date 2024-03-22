@@ -11,7 +11,7 @@ const Line= lazy(()=>import("./pages/charts/Line") ) ;
 import Loader from "./components/Loader";
 const Stopwatch = lazy(()=>import("./pages/apps/Stopwatch"));
 const Coupon= lazy(()=>import("./pages/apps/Coupon"));
-const Toss = lazy(()=>import("./pages/apps/Toss"));
+
 
 const NewProduct=lazy(()=>import("./pages/managment/NewProduct"));
 const ProductManagment =lazy(()=>import("./pages/managment/ProductManagment"));
