@@ -1,5 +1,5 @@
 
-import { BrowserRouter , Routes , Route, Link } from "react-router-dom"
+import { BrowserRouter , Routes , Route } from "react-router-dom"
  import {lazy , Suspense} from "react"
 const Dashboard = lazy(()=>import ("./pages/Dashboard")) ;
 const Customer  = lazy( ()=> import("./pages/Customer")) ;
