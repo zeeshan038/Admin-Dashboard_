@@ -8,7 +8,9 @@ const Products = lazy(()=>import("./pages/Products") ) ;
 const BarChart = lazy(()=>import("./pages/charts/BarChart") ) ;
 const Pie = lazy(()=>import("./pages/charts/Pie") ) ;
 const Line= lazy(()=>import("./pages/charts/Line") ) ;
+const VisitDashboard= lazy(()=>import("./pages/VisitDashboard") ) ;
 import Loader from "./components/Loader";
+
 const Stopwatch = lazy(()=>import("./pages/apps/Stopwatch"));
 const Coupon= lazy(()=>import("./pages/apps/Coupon"));
 
@@ -24,7 +26,7 @@ function App() {
       <BrowserRouter>
        <Suspense fallback={<Loader/>}>
       <Routes>
-      <Route path={'/'} element = {<Link to={"/admin/dashboard"}><button>Visit dashboard</button></Link>}/>
+      <Route path={'/'} element = {<VisitDashboard/>}/>
         <Route path={'/admin/dashboard'} element = {<Dashboard/>}/>
         <Route path={'/admin/product'} element = {<Products/>}/>
         <Route path={'/admin/customer'} element = {<Customer/>}/>
